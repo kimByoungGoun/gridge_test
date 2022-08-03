@@ -1,6 +1,6 @@
 package com.springboot.test1.controller;
 
-import com.springboot.test1.dto.MemberDto;
+import com.springboot.test1.data.dto.MemberDto;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

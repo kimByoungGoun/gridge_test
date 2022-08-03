@@ -1,4 +1,4 @@
-package com.springboot.test1.dto;
+package com.springboot.test1.data.dto;
 
 public class MemberDto {
 

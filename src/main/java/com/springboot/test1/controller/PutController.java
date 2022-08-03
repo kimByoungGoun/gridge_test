@@ -1,6 +1,6 @@
 package com.springboot.test1.controller;
 
-import com.springboot.test1.dto.MemberDto;
+import com.springboot.test1.data.dto.MemberDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;

@@ -17,6 +17,7 @@ public class CommentDAO {
     }
 
 
+    /*
     public Product insertProduct(Product product){
         Product saveProduct = productRepository.save(product);
         return saveProduct;
@@ -54,6 +55,6 @@ public class CommentDAO {
         }
 
     }
-
+*/
 
 }

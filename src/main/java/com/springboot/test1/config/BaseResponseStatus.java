@@ -41,7 +41,6 @@ public enum BaseResponseStatus {
     // [POST] /addresses
     POST_USERS_EMPTY_ADDRESS(false, 2030, "주소를 입력하세요."),
     POST_USERS_EMPTY_DETAIL_ADDRESS(false, 2031, "상세 주소를 입력하세요."),
-    POST_USERS_INVALID_TYPE(false, 2032, "주소 타입이 올바르지 않습니다. E : 기타, C : 회사, H : 집"),
 
 
     // [GET] /category
@@ -81,23 +80,11 @@ public enum BaseResponseStatus {
 
     //MAINPAGE
     MAINPAGE_GET_ADDRESS_ERROR(false, 4030, "주소 획득 실패"),
-    MAINPAGE_GET_EVENT_ERROR(false, 4031, "이벤트 획득 실패"),
-    MAINPAGE_GET_STORECATEGORY_ERROR(false, 4032, "카테고리 획득 실패"),
-    MAINPAGE_GET_ADVERTISE_ERROR(false, 4033, "광고 획득 실패"),
-    MAINPAGE_GET_STORE_ERROR(false, 4034, "가게 획득 실패"),
-    MAINPAGE_GET_STOREIMAGE_ERROR(false, 4035, "가게 이미지 획득 실패"),
-    MAINPAGE_GET_MAINPAGE_MERGE_ERROR(false, 4036, "메인페이지 정보 종합 실패"),
 
 
-    //Review
-    GET_REVIEW_REVIEWR_ERROR(false, 4040, "리뷰어 조회 실패"),
-    GET_REVIEW_MENULIST_ERROR(false, 4041, "주문리스트 조회 실패"),
-    GET_REVIEW_STORE_ERROR(false, 4042, "매장 리뷰 조회 실패")
     ;
 
 
-    // 5000 : 필요시 만들어서 쓰세요
-    // 6000 : 필요시 만들어서 쓰세요
 
 
     private final boolean isSuccess;

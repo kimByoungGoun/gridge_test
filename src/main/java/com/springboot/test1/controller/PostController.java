@@ -1,28 +1,47 @@
 package com.springboot.test1.controller;
 
 import com.springboot.test1.data.dto.MemberDto;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1/post-api")
+@RequestMapping("/post")
 public class PostController {
-    @PostMapping(value = "/member")
-    public String postMember(@RequestBody Map<String, Object> postData){
-        StringBuilder sb = new StringBuilder();
 
-        postData.entrySet().forEach(map -> {
-            sb.append(map.getKey() + " : " + map.getValue() + "\n");
-        });
-        return sb.toString();
-    }
-
-    @PostMapping(value = "/member2")
-    public String postMemberDto(@RequestBody MemberDto memberDto){
+    @GetMapping(value = "/{accountID}")
+    public String getPostList(@RequestBody MemberDto memberDto){
         return memberDto.toString();
     }
+
+    @PostMapping(value = "/{accountID}")
+    public String postPost(@RequestBody MemberDto memberDto){
+        return memberDto.toString();
+    }
+
+    @GetMapping(value = "/{postID}")
+    public String getPost(@RequestBody MemberDto memberDto){
+        return memberDto.toString();
+    }
+
+    @PutMapping(value = "/{postID}")
+    public String putPost(@RequestBody MemberDto memberDto){
+        return memberDto.toString();
+    }
+
+    @PutMapping(value = "/{postID}/disable")
+    public String deletePost(@RequestBody MemberDto memberDto){
+        return memberDto.toString();
+    }
+
+    @PostMapping(value = "/like/{postID}/{accountID}")
+    public String postPostLike(@RequestBody MemberDto memberDto){
+        return memberDto.toString();
+    }
+
+    @PutMapping(value = "/unlike/{postID}/{accountID}")
+    public String putPostLike(@RequestBody MemberDto memberDto){
+        return memberDto.toString();
+    }
+
 }

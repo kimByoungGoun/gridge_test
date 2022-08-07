@@ -19,6 +19,21 @@ public class PutController {
     }
     // http://localhost:8080/api/v1/put-api/member2
     @PutMapping(value = "/member2")
+    public String putMemberDto(@RequestBody MemberDto memberDto){
+        return memberDto.toString();
+    }
+
+    @PostMapping(value = "/member")
+    public String postMember(@RequestBody Map<String, Object> postData){
+        StringBuilder sb = new StringBuilder();
+
+        postData.entrySet().forEach(map -> {
+            sb.append(map.getKey() + " : " + map.getValue() + "\n");
+        });
+        return sb.toString();
+    }
+
+    @PostMapping(value = "/member2")
     public String postMemberDto(@RequestBody MemberDto memberDto){
         return memberDto.toString();
     }
